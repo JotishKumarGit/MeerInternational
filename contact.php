@@ -63,7 +63,6 @@
     </div>
     <!-- Page Header End -->
 
-
     <!-- Contact Start -->
     <div class="container-xxl py-5">
         <div class="container">
@@ -94,10 +93,9 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="col-md-6 wow fadeIn" data-wow-delay="0.1s">
                     <iframe class="position-relative rounded w-100 h-100"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3608.089497232191!2d82.5412503744441!3d25.26757462884837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398fe814759f5e21%3A0x8bba2e3688dc2886!2sOffice%20Nagar%20Panchayat%20Ghosia!5e0!3m2!1sen!2sin!4v1754645742045!5m2!1sen!2sin"
+                        src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d7007.118077643412!2d77.24280968959073!3d28.58300132406042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s%20H%20No.%20153%20Masjid%20Lane%20Bhogal%20Extension%20R%20Nnew%20-%20110014%2C%20Jangpura%2C%20Delhi%2C%20India!5e0!3m2!1sen!2sin!4v1754974141149!5m2!1sen!2sin"
                         frameborder="0" style="min-height: 350px; border:0;" allowfullscreen="" aria-hidden="false"
                         tabindex="0"></iframe>
                 </div>
@@ -144,7 +142,5 @@
     </div>
     <!-- Contact End -->
 
-
     <!-- Footer -->
-
     <?php include('footer.php') ?>

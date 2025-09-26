@@ -102,7 +102,7 @@
                             <div class="row g-4">
                                 <div class="col-md-6" style="min-height: 350px;">
                                     <div class="position-relative h-100">
-                                        <img class="position-absolute img-fluid w-100 h-100" src="img/rug_5.jpeg"
+                                        <img class="position-absolute img-fluid w-100 h-100" src="img/Carpets_4.jpeg"
                                             style="object-fit: cover;" alt="">
                                     </div>
                                 </div>
@@ -123,7 +123,7 @@
                             <div class="row g-4">
                                 <div class="col-md-6" style="min-height: 350px;">
                                     <div class="position-relative h-100">
-                                        <img class="position-absolute img-fluid w-100 h-100" src="img/service-2.jpg"
+                                        <img class="position-absolute img-fluid w-100 h-100" src="img/Carpets_5.jpeg"
                                             style="object-fit: cover;" alt="">
                                     </div>
                                 </div>
@@ -143,7 +143,7 @@
                             <div class="row g-4">
                                 <div class="col-md-6" style="min-height: 350px;">
                                     <div class="position-relative h-100">
-                                        <img class="position-absolute img-fluid w-100 h-100" src="img/service-3.jpg"
+                                        <img class="position-absolute img-fluid w-100 h-100" src="img/Carpets_6.jpeg"
                                             style="object-fit: cover;" alt="">
                                     </div>
                                 </div>
@@ -163,7 +163,7 @@
                             <div class="row g-4">
                                 <div class="col-md-6" style="min-height: 350px;">
                                     <div class="position-relative h-100">
-                                        <img class="position-absolute img-fluid w-100 h-100" src="img/service-4.jpg"
+                                        <img class="position-absolute img-fluid w-100 h-100" src="img/Carpets_7.jpeg"
                                             style="object-fit: cover;" alt="">
                                     </div>
                                 </div>
@@ -239,7 +239,5 @@
     </div>
     <!-- Testimonial End -->
 
-
     <!-- Footer -->
-
     <?php include('footer.php') ?>

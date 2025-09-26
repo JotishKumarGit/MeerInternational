@@ -1,3 +1,39 @@
+<!-- Enquiry Modal -->
+<div class="modal fade" id="enquiryModal" tabindex="-1" aria-labelledby="enquiryModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form id="enquiryForm">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="enquiryModalLabel">Enquiry Form</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name*</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email*</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="subject" class="form-label">Subject*</label>
+                        <input type="text" class="form-control" id="subject" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message*</label>
+                        <textarea class="form-control" id="message" rows="3" required></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-success">Submit via WhatsApp</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- send message on whatsapp  -->
 <script>
     function sendToWhatsApp() {
         // Get values
@@ -12,8 +48,7 @@
         // }
 
         // WhatsApp number (without +)
-        const phoneNumber = "919891415885"; // <-- apna number yahan daalein
-
+        const phoneNumber = "919891415885";
         // Create WhatsApp message
         const whatsappMessage = `Hello, my name is *${name}* (%0AEmail: ${email})%0A%0A${message}`;
 
@@ -23,8 +58,30 @@
     }
 </script>
 
+<!-- JavaScript to Handle enquiryForm WhatsApp Redirect -->
+<script>
+    document.getElementById("enquiryForm").addEventListener("submit", function (e) {
+        e.preventDefault();
 
+        // Get form values
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const subject = document.getElementById("subject").value.trim();
+        const message = document.getElementById("message").value.trim();
 
+        // WhatsApp number (include country code, e.g. 91 for India)
+        const phoneNumber = "91 9891415885";
+
+        // Create WhatsApp message
+        const whatsappMessage = `Name: ${name}%0AEmail: ${email}%0ASubject: ${subject}%0AMessage: ${message}`;
+
+        // WhatsApp URL
+        const whatsappURL = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`;
+
+        // Open WhatsApp
+        window.open(whatsappURL, "_blank");
+    });
+</script>
 
 <!-- Footer Start -->
 <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
@@ -90,10 +147,8 @@
 </div>
 <!-- Footer End -->
 
-
 <!-- Back to Top -->
 <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
-
 
 <!-- JavaScript Libraries -->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>

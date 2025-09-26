@@ -43,7 +43,6 @@
     </div>
     <!-- Spinner End -->
 
-
     <!-- Header -->
     <?php include('header.php') ?>
 
@@ -112,7 +111,7 @@
             <div class="row g-5">
                 <div class="col-lg-6 pt-4" style="min-height: 400px;">
                     <div class="position-relative h-100 wow fadeIn" data-wow-delay="0.1s">
-                        <img class="position-absolute img-fluid w-100 h-100" src="img/rug_3.jpeg"
+                        <img class="position-absolute img-fluid w-100 h-100" src="img/Carpets_3.jpeg"
                             style="object-fit: cover;" alt="">
                         <div class="position-absolute top-0 end-0 mt-n4 me-n4 py-4 px-5"
                             style="background: rgba(0, 0, 0, .08);">
@@ -123,7 +122,8 @@
                 </div>
                 <div class="col-lg-6">
                     <h6 class="text-primary text-uppercase">// About Us //</h6>
-                    <h1 class="mb-4"><span class="text-primary">Arif Carpets</span> Is The Best Place For Your Auto Care
+                    <h1 class="mb-4"><span class="text-primary">Meer international</span> Is The Best Place For Your
+                        Auto Care
                     </h1>
                     <p class="mb-4">"At Arif Carpets, we bring tradition and craftsmanship together to create elegant,
                         handwoven rugs and carpets. From classic Persian styles to modern minimalist designs, each piece

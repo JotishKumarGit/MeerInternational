@@ -1,9 +1,9 @@
-/********** Template CSS **********/
+/********** Updated Template CSS **********/
 :root {
-    --primary: #D81324;
-    --secondary: #0B2154;
-    --light: #F2F2F2;
-    --dark: #111111;
+    --primary: #007BFF;
+    --secondary: #17A2B8;
+    --light: #F8F9FA;
+    --dark: #343A40;
 }
 
 .fw-medium {
@@ -86,7 +86,7 @@
 .navbar-light .navbar-nav .nav-link {
     margin-right: 30px;
     padding: 25px 0;
-    color: #FFFFFF;
+    color: var(--dark);
     font-size: 15px;
     text-transform: uppercase;
     outline: none;
@@ -111,11 +111,6 @@
 .navbar-light .navbar-brand,
 .navbar-light a.btn {
     height: 75px;
-}
-
-.navbar-light .navbar-nav .nav-link {
-    color: var(--dark);
-    font-weight: 500;
 }
 
 .navbar-light.sticky-top {
