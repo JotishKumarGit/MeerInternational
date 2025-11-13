@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Meer international</title>
+    <title>Products Page</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -34,7 +34,6 @@
 </head>
 
 <body>
-
     <!-- Spinner Start -->
     <div id="spinner"
         class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
@@ -44,63 +43,103 @@
     </div>
     <!-- Spinner End -->
 
-    <?php include('header.php'); ?>
+    <!-- Header -->
+    <?php include('header.php') ?>
 
-    <div class="pt-5 text-center align-items-center justify-content-center">
-        <h2 class="text-dark ">All Products</h2>
-    </div>
-
-    <!-- This is section  -->
-    <section class="py-5">
-        <div class="container">
-            <div class="row py-5 px-4 justify-content-center align-items-center shadow-lg">
-                <?php
-                include('config.php');
-
-                // 1. Check if category ID is provided 
-                if (!isset($_GET['category_id'])) {
-                    echo "<p class='text-danger'>Category not specified.</p>";
-                    exit;
-                }
-
-                $category_id = intval($_GET['category_id']);
-
-                // 2. Fetch products based on category
-                $query = "SELECT * FROM products WHERE category_id = $category_id";
-                $result = mysqli_query($con, $query);
-
-                if (!$result || mysqli_num_rows($result) == 0) {
-                    echo "<p class='text-warning'>No products found in this category.</p>";
-                } else {
-                    while ($row = mysqli_fetch_assoc($result)) {
-                        ?>
-                        <!-- Product Card Start -->
-                        <div class="col-md-3 mb-4">
-                            <div class="card h-100 shadow-lg">
-                                <img src="<?php echo $row['image']; ?>" class="card-img-top" alt="<?php echo $row['name']; ?>"
-                                    style="height: 250px; object-fit: cover;">
-                                <div class="card-body text-center">
-                                    <h5 class="card-title"><?php echo $row['name']; ?></h5>
-                                    <div>
-                                        <a href="#" class="btn btn-outline-secondary mb-2 fw-bold text-dark border-2"
-                                            data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                            Enquiry
-                                        </a>
-                                        <a href="singlePage.php?id=<?php echo $row['id'] ?>" class="btn btn-primary">View
-                                            Details</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Product Card End -->
-                        <?php
-                    }
-                }
-                mysqli_close($con);
-                ?>
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header mb-5 p-0" style="background-image: url(img/rug_1.jpeg);">
+        <div class="container-fluid page-header-inner py-5">
+            <div class="container text-center">
+                <h1 class="display-3 text-white mb-3 animated slideInDown">Products</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center text-uppercase">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                        <li class="breadcrumb-item text-white active" aria-current="page">Products</li>
+                    </ol>
+                </nav>
             </div>
         </div>
-    </section>
+    </div>
+    <!-- Page Header End -->
 
-    <!-- footer -->
+   <!-- Product -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="text-primary text-uppercase">// Our Collection //</h6>
+                <h1 class="mb-5">Explore Our Premium Carpet Designs</h1>
+            </div>
+            <div class="row g-4 justify-content-center">
+
+                <!-- Persian Carpet -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="product-item bg-light h-100 text-center p-4">
+                        <div class="overflow-hidden mb-3">
+                            <img class="img-fluid" src="img/Carpets_1.jpeg" style="height: 200px !important;"
+                                alt="Persian Carpet">
+                        </div>
+                        <h5 class="fw-bold mb-2">Persian Carpets</h5>
+                        <p class="mb-3">Traditional hand-knotted pieces with rich cultural heritage and intricate
+                            designs.</p>
+                        <a href="Persian-Carpets.php" class="btn btn-outline-primary btn-sm">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Modern Carpet -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="product-item bg-light h-100 text-center p-4">
+                        <div class="overflow-hidden mb-3">
+                            <img class="img-fluid" src="img/Carpets_2.jpeg" style="height: 200px !important;"
+                                alt="Modern Carpet">
+                        </div>
+                        <h5 class="fw-bold mb-2">Modern Carpets</h5>
+                        <p class="mb-3">Contemporary styles with bold colors and geometric patterns for modern
+                            interiors.</p>
+                        <a href="Modern-Carpets.php" class="btn btn-outline-primary btn-sm">View Details</a>
+                    </div>
+                </div>
+                <!-- Silk Carpet -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="product-item bg-light h-100 text-center p-4">
+                        <div class="overflow-hidden mb-3">
+                            <img class="img-fluid" src="img/Carpets_3.jpeg" style="height: 200px !important;"
+                                alt="Silk Carpet">
+                        </div>
+                        <h5 class="fw-bold mb-2">Silk Carpets</h5>
+                        <p class="mb-3">Luxurious, soft, and finely detailed — perfect for elegant spaces.</p>
+                        <a href="Silk-Carpets.php" class="btn btn-outline-primary btn-sm">View Details</a>
+                    </div>
+                </div>
+                <!-- Custom Carpet -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="product-item bg-light h-100 text-center p-4">
+                        <div class="overflow-hidden mb-3">
+                            <img class="img-fluid" src="img/Carpets_5.jpeg" style="height: 200px !important;"
+                                alt="Custom Carpet">
+                        </div>
+                        <h5 class="fw-bold mb-2">Wool Carpet</h5>
+                        <p class="mb-3">Tailor-made designs to suit your style, space, and color palette.</p>
+                        <a href="Wool-Carpet.php" class="btn btn-outline-primary btn-sm">View Details</a>
+                    </div>
+                </div>
+                <!-- Acrylic Carpet -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="product-item bg-light h-100 text-center p-4">
+                        <div class="overflow-hidden mb-3">
+                            <img class="img-fluid" src="img/Carpets_6.jpeg" style="height: 200px !important;"
+                                alt="Custom Carpet">
+                        </div>
+                        <h5 class="fw-bold mb-2">Acrylic Carpet</h5>
+                        <p class="mb-3">Tailor-made designs to suit your style, space, and color palette.</p>
+                        <a href="Acrylic-Carpet.php" class="btn btn-outline-primary btn-sm">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Product end  -->
+
+
+    <!-- Footer -->
     <?php include('footer.php') ?>

@@ -175,7 +175,5 @@
     </div>
     <!-- About End -->
 
-
     <!-- Footer -->
-
     <?php include('footer.php') ?>
